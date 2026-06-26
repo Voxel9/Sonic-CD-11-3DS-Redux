@@ -3,7 +3,6 @@
 #include "Debug.hpp"    // For PrintLog()
 
 #include <3ds.h>
-#include <SDL2/SDL.h>
 #include <cstdio>
 #include <cstring>
 #include <cmath>

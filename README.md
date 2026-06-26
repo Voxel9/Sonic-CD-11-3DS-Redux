@@ -31,11 +31,11 @@ Even if your platform isn't supported by the official releases, you **must** buy
 - Access dev menu at any time by pressing SELECT
 
 ## Setup
-- [Dump dspfirm.cdc](https://github.com/zoogie/DSP1/releases) from your 3DS, make sure it's at `sdmc:/3ds/`. This is necessary for audio to work.
+- Dump dspfirm.cdc to the SD card. On Luma3DS 10.3 or newer, this can be done by opening the Rosalina overlay menu and selecting `Misc options -> Dump DSP firmware`. This is necessary for audio to work.
 - For the best experience, use Data.rsdk from the official mobile version and place it at `sdmc:/3ds/SonicCD/`.
-- For the best experience, copy the decompiled scripts from [here](https://github.com/RSDKModding/RSDKv3-Script-Decompilation) to `sdmc:/3DS/SonicCD/Scripts/`.
+- For the best experience, copy the decompiled scripts from [here](https://github.com/RSDKModding/RSDKv3-Script-Decompilation/tree/1aa415c280e4885f44a9417ae316254cd63d33a3) to `sdmc:/3DS/SonicCD/Scripts/`.
   - Make sure to set `TxtScripts` in settings.ini to `true` after doing this.
-- (Optional) To slightly improve loading times, [extract Data.rsdk contents](https://forums.sonicretro.org/index.php?threads/rsdk-unpacker.30338/) to `sdmc:/3ds/SonicCD/Data/`.
+- (Optional) To slightly improve loading times, extract the Data.rsdk contents to `sdmc:/3ds/SonicCD/Data/` using the `Tools -> RSDK Unpacker` feature in [RetroED](https://github.com/RSDKModding/RetroED/releases).
   - Make sure Data.rsdk itself is removed from `sdmc:/3ds/SonicCD/` or set `DataFile` in settings.ini to blank.
 - (Optional) For FMV playback, copy the `videos/` folder from the original Steam release to `sdmc:/3ds/SonicCD/`.
   - To ensure the best playback performance, scale down the OGV files to 400x240 using ffmpeg:
@@ -46,6 +46,9 @@ Even if your platform isn't supported by the official releases, you **must** buy
 ## Building
 - [Install devkitARM and 3ds-dev](https://devkitpro.org/wiki/Getting_Started)
 - Install the following packages: `3ds-sdl 3ds-libogg 3ds-libvorbisidec 3ds-libtheora`
+- Download [bannertool](https://github.com/Epicpkmn11/bannertool/releases/latest)
+- Download [makerom](https://github.com/profi200/Project_CTR/releases/latest)
+- Place them in a directory added to the `$(PATH)` environment variable.
 - Clone/download this repository
 - `cd` to the `RSDKv3.3DS` folder
 - Run `make`
